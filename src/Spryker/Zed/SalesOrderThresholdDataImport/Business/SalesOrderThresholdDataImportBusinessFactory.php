@@ -48,25 +48,16 @@ class SalesOrderThresholdDataImportBusinessFactory extends DataImportBusinessFac
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdDataImport\Dependency\Facade\SalesOrderThresholdDataImportToSalesOrderThresholdFacadeInterface
-     */
     public function getSalesOrderThresholdFacade(): SalesOrderThresholdDataImportToSalesOrderThresholdFacadeInterface
     {
         return $this->getProvidedDependency(SalesOrderThresholdDataImportDependencyProvider::FACADE_SALES_ORDER_THRESHOLD);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdDataImport\Dependency\Facade\SalesOrderThresholdDataImportToStoreFacadeInterface
-     */
     public function getStoreFacade(): SalesOrderThresholdDataImportToStoreFacadeInterface
     {
         return $this->getProvidedDependency(SalesOrderThresholdDataImportDependencyProvider::FACADE_STORE);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdDataImport\Dependency\Facade\SalesOrderThresholdDataImportToCurrencyFacadeInterface
-     */
     public function getCurrencyFacade(): SalesOrderThresholdDataImportToCurrencyFacadeInterface
     {
         return $this->getProvidedDependency(SalesOrderThresholdDataImportDependencyProvider::FACADE_CURRENCY);

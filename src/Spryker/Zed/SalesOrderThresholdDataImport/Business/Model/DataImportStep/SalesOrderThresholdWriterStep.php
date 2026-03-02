@@ -48,11 +48,6 @@ class SalesOrderThresholdWriterStep implements DataImportStepInterface
      */
     protected $currenciesHeap = [];
 
-    /**
-     * @param \Spryker\Zed\SalesOrderThresholdDataImport\Dependency\Facade\SalesOrderThresholdDataImportToSalesOrderThresholdFacadeInterface $salesOrderThresholdFacade
-     * @param \Spryker\Zed\SalesOrderThresholdDataImport\Dependency\Facade\SalesOrderThresholdDataImportToStoreFacadeInterface $storeFacade
-     * @param \Spryker\Zed\SalesOrderThresholdDataImport\Dependency\Facade\SalesOrderThresholdDataImportToCurrencyFacadeInterface $currencyFacade
-     */
     public function __construct(
         SalesOrderThresholdDataImportToSalesOrderThresholdFacadeInterface $salesOrderThresholdFacade,
         SalesOrderThresholdDataImportToStoreFacadeInterface $storeFacade,
@@ -63,11 +58,6 @@ class SalesOrderThresholdWriterStep implements DataImportStepInterface
         $this->currencyFacade = $currencyFacade;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $storeTransfer = $this->getStoreByName($dataSet[SalesOrderThresholdDataSetInterface::COLUMN_STORE]);
@@ -87,16 +77,6 @@ class SalesOrderThresholdWriterStep implements DataImportStepInterface
         }
     }
 
-    /**
-     * @param string $salesOrderThresholdTypeKey
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param \Generated\Shared\Transfer\CurrencyTransfer $currencyTransfer
-     * @param int $thresholdValue
-     * @param int|null $fee
-     * @param string|null $glossaryKey
-     *
-     * @return \Generated\Shared\Transfer\SalesOrderThresholdTransfer
-     */
     protected function createSalesOrderThresholdTransfer(
         string $salesOrderThresholdTypeKey,
         StoreTransfer $storeTransfer,

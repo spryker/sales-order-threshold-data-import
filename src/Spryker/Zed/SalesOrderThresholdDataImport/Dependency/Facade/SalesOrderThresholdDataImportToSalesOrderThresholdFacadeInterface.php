@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\SalesOrderThresholdTransfer;
 
 interface SalesOrderThresholdDataImportToSalesOrderThresholdFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SalesOrderThresholdTransfer $salesOrderThresholdTransfer
-     *
-     * @return \Generated\Shared\Transfer\SalesOrderThresholdTransfer
-     */
     public function saveSalesOrderThreshold(
         SalesOrderThresholdTransfer $salesOrderThresholdTransfer
     ): SalesOrderThresholdTransfer;

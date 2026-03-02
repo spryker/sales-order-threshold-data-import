@@ -33,11 +33,6 @@ class SalesOrderThresholdDataImportDependencyProvider extends DataImportDependen
      */
     public const FACADE_CURRENCY = 'FACADE_CURRENCY';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -49,11 +44,6 @@ class SalesOrderThresholdDataImportDependencyProvider extends DataImportDependen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addSalesOrderThresholdFacade(Container $container): Container
     {
         $container->set(static::FACADE_SALES_ORDER_THRESHOLD, function (Container $container) {
@@ -65,11 +55,6 @@ class SalesOrderThresholdDataImportDependencyProvider extends DataImportDependen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addStoreFacade(Container $container): Container
     {
         $container->set(static::FACADE_STORE, function (Container $container) {
@@ -81,11 +66,6 @@ class SalesOrderThresholdDataImportDependencyProvider extends DataImportDependen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCurrencyFacade(Container $container): Container
     {
         $container->set(static::FACADE_CURRENCY, function (Container $container) {

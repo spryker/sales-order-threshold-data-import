@@ -36,9 +36,6 @@ class SalesOrderThresholdDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsData(): void
     {
         $this->setupDependencies();
@@ -61,18 +58,12 @@ class SalesOrderThresholdDataImportPluginTest extends Unit
         $this->tester->assertSalesOrderThresholdTableHasRecords();
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         $dataImportPlugin = new SalesOrderThresholdDataImportPlugin();
         $this->assertSame(SalesOrderThresholdDataImportConfig::IMPORT_TYPE_SALES_ORDER_THRESHOLD, $dataImportPlugin->getImportType());
     }
 
-    /**
-     * @return void
-     */
     protected function setupDependencies(): void
     {
         $strategies = [
